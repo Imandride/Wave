@@ -20,6 +20,8 @@ void WavHead::Read_Header()
 	std::cout << fsizedata << std::endl;
 }
 
+
+
 void WavHead::Update_Header()
 {
 	fread(&ftype, sizeof(char), 4, buff);
@@ -37,7 +39,7 @@ void WavHead::Update_Header()
 	fread(&fsizedata, sizeof(long), 1, buff);
 }
 
-WavHead::WavHead(FILE* & b)
+WavHead::WavHead( FILE* const &b)
 {
 	buff = b;
 	std::cout << " Argument File Buffer"<< std::endl;

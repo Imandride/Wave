@@ -1,8 +1,5 @@
 #pragma once
 
-//#include<iostream>
-//#include <Windows.h>
-
 extern FILE * buf;
 
 class WavHead
@@ -26,10 +23,12 @@ class WavHead
 
 	
 public:
-
+	FILE* _getBUFF() { return buff; };
+	short _getBC() { return bc; };
 	void Update_Header();
 	void Read_Header();
-	WavHead(FILE* &b);
+	int getFDataSizeBPS() { return (fsizedata / bps); };
+	WavHead( FILE* const &b);
 	WavHead();
 
 	~WavHead();

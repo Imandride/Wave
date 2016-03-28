@@ -2,6 +2,7 @@
 //
 #include "stdafx.h"
 #include "WavHead.h"
+#include "Read_Data.h"
 
 using namespace std;
 
@@ -15,10 +16,8 @@ int main()
 	err = fopen_s(&buf, "Test.wav", "r");
 	err == 0 ? pass() : fail();
 	
-	//WavHead * p = new WavHead(buf);
-	WavHead * p = new WavHead();
-	p->Update_Header();
-	p->Read_Header();
+	Read_Data * p = new Read_Data();
+	p->getwavedata();
 	delete p;
 
 
