@@ -21,23 +21,7 @@ int main()
 	p->Read_Header();
 	delete p;
 
-//	int fsdobps;
-	//int i = 0;
-//	int count = 0;
-	//int temp = 0;
-//	int disp = 0;
-//	while (i < fsdobps) {
-//		fread(&maybedta, 2, 1, buf);
-//		if (temp != maybedta) 
-//		{
-//			cout << maybedta << " ";
-//			disp++;
-//		}
-//		temp = maybedta;
-//		i++;
-//		count++;
-//	}
-//	cout << fsdobps << " - " << count << " - " << disp;
+
 
 
 
